@@ -1,8 +1,12 @@
 import React from 'react';
+import RecipeList from './RecipeList'
 
 
 function App() {
-  return 'Hello world'
+  return (
+    <RecipeList />
+
+  )
 }
 
 export default App;
