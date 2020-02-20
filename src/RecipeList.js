@@ -1,12 +1,11 @@
 import React from 'react'
 import Recipe from './Recipe'
 
-export default function RecipeList() {
+export default function RecipeList({ recipe }) {
   return (
-    <>
-      <Recipe />
-
-      <Recipe />
-    </>
+    <div>
+      
+      
+    </div>
   )
 }
