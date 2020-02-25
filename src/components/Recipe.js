@@ -1,6 +1,5 @@
 import React from 'react'
 import IngredientList from './IngredientList'
-import Ingredient from './Ingredient'
 
 export default function Recipe(props) {
   const {
@@ -24,7 +23,7 @@ export default function Recipe(props) {
         <span>{cookTime}</span>
       </div>
       <div>
-        <span>Serving:</span>
+        <span>Servings:</span>
         <span>{servings}</span>
       </div>
       <div>
