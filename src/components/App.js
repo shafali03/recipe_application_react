@@ -5,7 +5,7 @@ import uuidv4 from 'uuid/v4'
 
 
 function App() {
-  const [recipes, setRecipe] = useState (sampleRecipes)
+  const [recipes, setRecipes] = useState (sampleRecipes)
 
   function handleRecipeAdd() {
     const newRecipe = {
@@ -19,14 +19,18 @@ function App() {
       ]
     }
   
-    setRecipe([...recipes, newRecipe])
+    setRecipes([...recipes, newRecipe])
   }
 
+  function handleRecipeDelete(id) {
+    setRecipes(recipes.filter(recipe => recipe.id !== id))
+  }
 
   return (
     <RecipeList 
-    recipes={recipes}
+     recipes={recipes}
      handleRecipeAdd={handleRecipeAdd} 
+     handleRecipeDelete={handleRecipeDelete}
     />
   )
 }
