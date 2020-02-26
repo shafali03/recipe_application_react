@@ -28,11 +28,11 @@ export default function Recipe(props) {
       </div>
       <div className="recipe__row">
         <span className="recipe__label">Instructions:</span>
-        <div className="recipe__value">{instructions}</div>
+        <div className="recipe__value recipe__instructions recipe__value--indented">{instructions}</div>
       </div>
       <div className="recipe__row">
         <span className="recipe__label">Ingredients:</span>
-        <div className="recipe__value">
+        <div className="recipe__value recipe__instructions recipe__value--indented">
         <IngredientList ingredients={ingredients}/>
         </div>
       </div>
