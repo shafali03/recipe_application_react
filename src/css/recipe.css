@@ -1,0 +1,13 @@
+.recipe {
+
+}
+
+.recipe__header {
+display: flex;
+justify-content: space-between;
+}
+
+.recipe__title {
+  margin: 0;
+  font-size: 1.7rem;
+}
