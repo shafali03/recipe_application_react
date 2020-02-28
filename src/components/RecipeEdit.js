@@ -9,16 +9,12 @@ export default function RecipeEdit() {
      <div>
        <label htmlFor="name">Name</label>
        <input type="text" name="name" id="name" />
-     </div>
-
-     <div>
        <label htmlFor="cookTime">Cook Time</label>
        <input type="text" name="cookTime" id="cookTime" />
-     </div>
-
-     <div>
        <label htmlFor="servings">Servings</label>
-       <input type="text" name="servings" id="servings" />
+       <input type="text" min="1" name="servings" id="servings" />
+       <label htmlFor="instructions">Instructions</label>
+       <textarea name="instructions" id="instruction"></textarea>
      </div>
     </div>
   )
