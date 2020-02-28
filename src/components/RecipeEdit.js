@@ -1,4 +1,5 @@
 import React from 'react'
+import RecipeIngredientEdit from './RecipeIngredientEdit'
 
 export default function RecipeEdit() {
   return (
@@ -22,6 +23,9 @@ export default function RecipeEdit() {
        <div>Name</div>
        <div>Amount</div>
        <div></div>
+       <RecipeIngredientEdit />
+       <RecipeIngredientEdit />
+
        { /* Ingredient Components */}
      </div>
      <div>
