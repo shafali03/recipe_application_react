@@ -10,6 +10,16 @@ export default function RecipeEdit() {
        <label htmlFor="name">Name</label>
        <input type="text" name="name" id="name" />
      </div>
+
+     <div>
+       <label htmlFor="cookTime">Cook Time</label>
+       <input type="text" name="cookTime" id="cookTime" />
+     </div>
+
+     <div>
+       <label htmlFor="servings">Servings</label>
+       <input type="text" name="servings" id="servings" />
+     </div>
     </div>
   )
 }
