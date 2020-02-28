@@ -16,6 +16,17 @@ export default function RecipeEdit() {
        <label htmlFor="instructions">Instructions</label>
        <textarea name="instructions" id="instruction"></textarea>
      </div>
+     <br />
+     <label>Ingredients</label>
+     <div>
+       <div>Name</div>
+       <div>Amount</div>
+       <div></div>
+       { /* Ingredient Components */}
+     </div>
+     <div>
+       <button>Add Ingredient</button>
+     </div>
     </div>
   )
 }
