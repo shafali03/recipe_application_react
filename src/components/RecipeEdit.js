@@ -48,8 +48,8 @@ export default function RecipeEdit() {
        </textarea>
      </div>
      <br />
-     <label>Ingredients</label>
-     <div>
+     <label className="recipe-edit__label">Ingredients</label>
+     <div className="recipe-edit__ingredients-grid">
        <div>Name</div>
        <div>Amount</div>
        <div></div>
@@ -58,8 +58,8 @@ export default function RecipeEdit() {
 
        { /* Ingredient Components */}
      </div>
-     <div>
-       <button>Add Ingredient</button>
+     <div className="recipe-edit__add-ingredient-btn-container"> 
+       <button className="btn btn--primary">Add Ingredient</button>
      </div>
     </div>
   )
