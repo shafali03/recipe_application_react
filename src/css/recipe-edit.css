@@ -33,7 +33,6 @@
   font-weight: bold;
 }
 
-
 .recipe-edit__input {
   border: 1px solid black;
   border-radius: 5px;
@@ -41,4 +40,9 @@
   padding: 5px 10px;
   outline: none;
   width: 100%;
+}
+
+textarea.recipe-edit__input {
+  resize: none;
+  height: 200px;
 }
