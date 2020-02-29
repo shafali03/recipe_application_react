@@ -8,7 +8,8 @@ export default function RecipeEdit() {
        <button className="btn recipe-edit__remove-button">&times;</button>
      </div>
      <div className="recipe-edit__details-grid">
-       <label htmlFor="name"
+       <label 
+         htmlFor="name"
          className="recipe-edit__label">
          Name
         </label>
@@ -22,10 +23,13 @@ export default function RecipeEdit() {
          className="recipe-edit__label">
          Cook Time
        </label>
+
        <input 
          type="text" 
          name="cookTime" 
-         id="cookTime" />
+         id="cookTime" 
+         className="recipe-edit__input" />
+        
        <label 
          htmlFor="servings"
          className="recipe-edit__label">
@@ -35,7 +39,9 @@ export default function RecipeEdit() {
          type="text" 
          min="1" 
          name="servings" 
-         id="servings" />
+         id="servings"
+         className="recipe-edit__input" />
+        
        <label 
          htmlFor="instructions"
          className="recipe-edit__label">
