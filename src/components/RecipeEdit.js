@@ -9,6 +9,13 @@ export default function RecipeEdit({ recipe }) {
    handleRecipeChange(recipe.id, { ...recipe, ...changes })
   }
 
+  function handleIngredientChange(id, ingredient) {
+    const newIngredients = [...recipe.ingredients]
+    const index = newIngredients.findIndex(i => i.id === id)
+    newIngredients[index] = ingredient
+    handleRecipeChange({ ingredients: newIngredients })
+  }
+
 
   return (
     <div className="recipe-edit">
@@ -62,9 +69,9 @@ export default function RecipeEdit({ recipe }) {
           name="instructions"
           className="recipe-edit__input"
           onInput={e => handleChange({ instructions: e.target.value })}
-          id="instructions"> 
-          {recipe.instructions}
-        </textarea>
+          value={recipe.instructions}
+          id="instructions" /> 
+        
       </div>
       <br />
       <label className="recipe-edit__label">Ingredients</label>
@@ -75,6 +82,7 @@ export default function RecipeEdit({ recipe }) {
         {recipe.ingredients.map(ingredient => (
           <RecipeIngredientEdit
             key={ingredient.id}
+            handleIngredientChange={handleIngredientChange}
             ingredient={ingredient}
           />
         ))}
