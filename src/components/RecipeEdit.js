@@ -6,10 +6,9 @@ export default function RecipeEdit({ recipe }) {
   const { handleRecipeChange } = useContext(RecipeContext)
 
   function handleChange(changes) {
-    { ...recipe, ...changes }
+   handleRecipeChange(recipe.id, { ...recipe, ...changes })
   }
 
-handleChange({ name: 'New Name'})
 
   return (
     <div className="recipe-edit">
@@ -27,6 +26,7 @@ handleChange({ name: 'New Name'})
           name="name"
           id="name"
           value={recipe.name}
+          onInput={e => handleChange({ name: e.target.value })}
           className="recipe-edit__input" />
         <label
           htmlFor="cookTime"
@@ -38,6 +38,7 @@ handleChange({ name: 'New Name'})
           name="cookTime"
           id="cookTime"
           value={recipe.cookTime}
+          onInput={e => handleChange({ cookTime: e.target.value })}
           className="recipe-edit__input" />
         <label
           htmlFor="servings"
@@ -50,6 +51,7 @@ handleChange({ name: 'New Name'})
           name="servings"
           id="servings"
           value={recipe.servings}
+          onInput={e => handleChange({ servings: parseInt (e.target.value || '' )})}
           className="recipe-edit__input" />
         <label
           htmlFor="instructions"
@@ -59,6 +61,7 @@ handleChange({ name: 'New Name'})
         <textarea
           name="instructions"
           className="recipe-edit__input"
+          onInput={e => handleChange({ instructions: e.target.value })}
           id="instructions"> 
           {recipe.instructions}
         </textarea>
